@@ -7,7 +7,7 @@ import proxyscrape
 let client = Proxyscrape()
 
 do {
-    let servers_list = try await client.get_servers_list()
+    let servers_list = try await client.get_servers_list(country: "US", protocol_type: "socks5")
     print(servers_list)
 } catch {
     print("Error: \(error)")
